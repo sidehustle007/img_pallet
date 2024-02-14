@@ -77,6 +77,7 @@ const App = () => {
             <div
               style={{
                 display: "flex",
+                flexWrap: "wrap",
                 gap: "1px",
                 justifyContent: "center",
                 alignItems: "center",
@@ -109,7 +110,7 @@ const App = () => {
             style={{
               backgroundColor: `rgb(${cr},${cg}, ${cb})`,
               width: "20vh",
-              height: "10vh",
+              height: "7vh",
               padding: "20px",
               marginTop: "20px",
               display: "flex",
@@ -121,18 +122,18 @@ const App = () => {
           >
             R = {cr}({calculatePercentage(cr)}%)
             <br /> G = {cg}({calculatePercentage(cg)}%)
-            <br /> B = {cb}({calculatePercentage(cb)}%)
+            <br />B = {cb}({calculatePercentage(cb)}%)
           </div>
           <div
             style={{
               display: "flex",
-              marginTop: "70px",
-              transform: "rotate(-90deg)",
+              marginTop: "20px",
+              // transform: "rotate(-90deg)",
               flexDirection: "column",
               height: "10vh",
               width: "20vh",
-              marginLeft: "-40px",
-              gap: "40px",
+              // marginLeft: "-40px",
+              gap: "10px",
             }}
           >
             <input
