@@ -1,0 +1,14 @@
+.select_img {
+  height: 38vh;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.cr {
+  accent-color: red;
+}
+.cb {
+  accent-color: blue;
+}
+.cg {
+  accent-color: green;
+}
