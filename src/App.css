@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main_bg {
+  background-color: #2e2e2e10;
+  width: 100vw;
+  height: 100vh;
+}
+
 .select_img {
   height: 38vh;
   margin-top: 20px;
@@ -11,4 +27,177 @@
 }
 .cg {
   accent-color: green;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img_upload {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  width: 30vw;
+  /* height: 260px; */
+  background-color: #ffffff;
+  padding: 20px 30px;
+}
+.title {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: blueviolet;
+  font-size: 120px;
+  transform: rotate(-45deg);
+  margin-left: -40vw;
+}
+.title_nav {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: blueviolet;
+  font-size: 20px;
+}
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.drop_box {
+  margin: 20px 0;
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px solid blueviolet;
+  border-radius: 5px;
+  background-color: #8a2be210;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #005af0;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #005af0;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.upload-custone-2 {
+  background-color: #8a2be210;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2.5px solid blueviolet;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select_img_lable {
+  text-align: center;
+}
+.select_img_la {
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: blueviolet;
+  color: white;
+}
+.nav_bar_title {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 3.5em;
+  background-color: white;
+  padding-left: 3vw;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.select_img {
+  /* width: 30vw; */
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 720px) {
+  .select_img {
+    max-width: 95vw;
+    border-radius: 4px;
+  }
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    width: 90vw;
+    /* height: 260px; */
+    background-color: #ffffff;
+    padding: 20px 30px;
+  }
+  .title {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 900;
+    font-style: italic;
+    color: blueviolet;
+    font-size: 15vw;
+    transform: rotate(0deg);
+    margin-left: 0vw;
+  }
+  .upload_txt_img {
+    display: none;
+  }
+  .upload-custone-2 {
+    background-color: #8a2be210;
+    padding: 4px;
+    border-radius: 7px;
+    border: 2.5px solid blueviolet;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
