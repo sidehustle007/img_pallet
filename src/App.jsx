@@ -61,12 +61,10 @@ const App = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-        width: "100%",
-        height: "100vh",
         gap: "50px",
         backgroundImage: `linear-gradient(rgba(${cr}, ${cg}, ${cb}, .3), #2e2e2e10)`,
       }}
-      className={selectedImage ? "main_bg" : ""}
+      className={selectedImage ? "main_bg" : "main_bg_2"}
     >
       {!selectedImage ? (
         <div

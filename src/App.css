@@ -8,12 +8,16 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.main_bg {
+.main_bg,
+.main_bg_2 {
   background-color: #2e2e2e10;
   width: 100vw;
   min-height: 100vh;
   /* margin-top: 3.5em; */
   /* padding-bottom: 1.5em; */
+}
+.main_bg_2 {
+  height: 100vh;
 }
 
 .select_img {
@@ -167,9 +171,6 @@ input[type="file"] {
   /* width: 30vw; */
   border-radius: 12px;
 }
-.color_selcted_box {
-  /* width: 15vw; */
-}
 
 .selected_box_colors {
   background-color: red;
@@ -200,7 +201,7 @@ input[type="file"] {
 @media screen and (max-width: 720px) {
   .main_bg {
     margin-top: 3.5em;
-    padding-bottom: 1.5em;
+    padding-bottom: 3.5em;
   }
   .hex_code_box {
     width: 46.5vw;
