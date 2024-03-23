@@ -11,7 +11,9 @@
 .main_bg {
   background-color: #2e2e2e10;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  /* margin-top: 3.5em; */
+  /* padding-bottom: 1.5em; */
 }
 
 .select_img {
@@ -55,6 +57,7 @@ input[type="file"] {
   /* height: 260px; */
   background-color: #ffffff;
   padding: 20px 30px;
+  margin-top: -10em;
 }
 .title {
   font-family: "Cedarville Cursive", cursive;
@@ -164,8 +167,47 @@ input[type="file"] {
   /* width: 30vw; */
   border-radius: 12px;
 }
+.color_selcted_box {
+  /* width: 15vw; */
+}
+
+.selected_box_colors {
+  background-color: red;
+  width: auto;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+.hex_code_box {
+  width: 7.5vw;
+  padding: 30px;
+  height: 50px;
+  border-radius: 7px;
+}
 
 @media screen and (max-width: 720px) {
+  .main_bg {
+    margin-top: 3.5em;
+    padding-bottom: 1.5em;
+  }
+  .hex_code_box {
+    width: 46.5vw;
+    padding: 30px;
+    height: 50px;
+    border-radius: 7px;
+  }
   .select_img {
     max-width: 95vw;
     border-radius: 4px;
@@ -177,7 +219,9 @@ input[type="file"] {
     /* height: 260px; */
     background-color: #ffffff;
     padding: 20px 30px;
+    margin-top: 0em;
   }
+
   .title {
     font-family: "Cedarville Cursive", cursive;
     font-weight: 900;
@@ -191,13 +235,16 @@ input[type="file"] {
     display: none;
   }
   .upload-custone-2 {
-    background-color: #8a2be210;
     padding: 4px;
     border-radius: 7px;
-    border: 2.5px solid #8a2be2;
+    border: 2.5px solid rgb(138, 43, 226);
 
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .img_upload {
+    width: 35px;
+    height: 35px;
   }
 }

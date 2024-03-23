@@ -6,9 +6,10 @@ const App = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imgColors, setImgColors] = useState();
   const [rgbtf, setRgbTF] = useState(false);
-  const [cr, setR] = useState(0);
-  const [cg, setG] = useState(0);
-  const [cb, setB] = useState(0);
+  const [cr, setR] = useState(138);
+  const [cg, setG] = useState(43);
+  const [cb, setB] = useState(226);
+
   console.log(imgColors);
 
   const handleImageChange = (event) => {
@@ -63,8 +64,9 @@ const App = () => {
         width: "100%",
         height: "100vh",
         gap: "50px",
+        backgroundImage: `linear-gradient(rgba(${cr}, ${cg}, ${cb}, .3), #2e2e2e10)`,
       }}
-      className="main_bg"
+      className={selectedImage ? "main_bg" : ""}
     >
       {!selectedImage ? (
         <div
@@ -80,7 +82,12 @@ const App = () => {
           className="nav_bar_title"
           style={{ boxShadow: `2px 12px 125px rgba(${cr}, ${cg}, ${cb}, 1)` }}
         >
-          <div className="title_nav">Color Pallet</div>
+          <div
+            className="title_nav cursor_pointer"
+            onClick={() => setSelectedImage(null)}
+          >
+            Color Pallet
+          </div>
         </div>
       )}
       {!selectedImage ? (
@@ -89,7 +96,7 @@ const App = () => {
             <h3>Upload Image</h3>
             <label class="drop_box" for="file-upload">
               <header>
-                <h4>Drag Image File Here</h4>
+                <h4>Drag Image Here</h4>
               </header>
               <p>Files Supported: JPEG, PNG</p>
               <input
@@ -106,8 +113,13 @@ const App = () => {
           </div>
         </div>
       ) : (
-        <div style={{ position: "fixed", bottom: "15px" }}>
-          <label for="file-upload" class="upload-custone-2">
+        <div style={{ position: "fixed", bottom: "15px", right: "20px" }}>
+          <label
+            for="file-upload"
+            class="upload-custone-2 cursor_pointer"
+            style={{ background: "white" }}
+            // style={{ background: `rgba(${cr}, ${cg}, ${cb}, .1)` }}
+          >
             <img
               className="img_upload"
               src="https://cdn.iconscout.com/icon/free/png-256/free-upload-1851088-1569238.png"
@@ -134,32 +146,28 @@ const App = () => {
                   className="select_img"
                   src={selectedImage}
                   alt="Selected"
-                  style={
-                    {
-                      // border: `5px rgb(${cr}, ${cg}, ${cb}) solid`,
-                      // borderRadius: "20px",
-                      // boxShadow: `2px 12px 125px rgba(${cr}, ${cg}, ${cb}, 1)`,
-                    }
-                  }
+                  style={{
+                    // border: `5px rgb(${cr}, ${cg}, ${cb}) solid`,
+                    // borderRadius: "20px",
+                    boxShadow: `2px 12px 125px rgba(${cr}, ${cg}, ${cb}, 1)`,
+                  }}
                 />
               </ColorExtractor>
               <div
                 style={{
                   display: "flex",
                   flexWrap: "wrap",
-                  gap: "1px",
+                  gap: "7px",
                   justifyContent: "center",
                   alignItems: "center",
-                  marginTop: "20px",
+                  marginTop: "40px",
                 }}
               >
                 {imgColors?.map((hexcode, index) => (
                   <div
+                    className="hex_code_box"
                     style={{
                       backgroundColor: hexcode,
-                      minWidth: "10vh",
-                      height: "3vh",
-                      padding: "20px",
                       display: "flex",
                       // borderRadius: "5px",
                       justifyContent: "center",
@@ -176,23 +184,30 @@ const App = () => {
             </div>
 
             <div
+              className="color_selcted_box"
               style={{
-                backgroundColor: `rgb(${cr},${cg}, ${cb})`,
-                width: "20vh",
+                // backgroundColor: `rgb(${cr},${cg}, ${cb})`,
                 minHeight: "7vh",
                 padding: "20px",
                 marginTop: "20px",
                 display: "flex",
                 textAlign: "initial",
                 borderRadius: "5px",
+                gap: "5px",
                 justifyContent: "center",
                 alignItems: "center",
                 color: "white",
               }}
             >
-              R = {cr}({calculatePercentage(cr)}%)
-              <br /> G = {cg}({calculatePercentage(cg)}%)
-              <br />B = {cb}({calculatePercentage(cb)}%)
+              <div className="selected_box_colors red">
+                R = {cr}({calculatePercentage(cr)}%)
+              </div>
+              <div className="selected_box_colors green">
+                G = {cg}({calculatePercentage(cg)}%)
+              </div>
+              <div className="selected_box_colors blue">
+                B = {cb}({calculatePercentage(cb)}%)
+              </div>
             </div>
             <div
               style={{
