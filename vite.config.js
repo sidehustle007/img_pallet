@@ -12,7 +12,7 @@ export default defineConfig({
       manifest: {
         name: "colorKoo",
         short_name: "colorKoo",
-        theme_color: "#ffffff",
+        theme_color: "#8a2be2",
         icons: [
           {
             src: "pwa-64x64.png",

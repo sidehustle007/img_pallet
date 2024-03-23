@@ -194,7 +194,7 @@ input[type="file"] {
     background-color: #8a2be210;
     padding: 4px;
     border-radius: 7px;
-    border: 2.5px solid blueviolet;
+    border: 2.5px solid #8a2be2;
 
     display: flex;
     justify-content: center;
